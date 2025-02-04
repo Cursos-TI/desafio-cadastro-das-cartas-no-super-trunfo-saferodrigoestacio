@@ -94,7 +94,7 @@ int main() {
     // calcula o pib per capita da primeira carta
     pib_per_capita1 = pib1 / populacao1;
     // calcula o super poder
-    superpoder1 = (double) populacao1 + (double) area1 + (double) pib1 + (double) pontos_turisticos1 + (double) densidade_populacional1 + (double) pib_per_capita1;
+    superpoder1 = (double) populacao1 + area1 + pib1 + pontos_turisticos1 + densidade_populacional1 + pib_per_capita1;
 
     // calcula densidade populacional da segunda carta
     densidade_populacional2 =  (float) populacao2 / area2;
@@ -191,8 +191,8 @@ int main() {
     // resultado do densidade populacional
     printf("------------------------------------------------------------------\n\n");
     printf("Cidades: %s - %s - %s x %s - %s - %s \n", codigo_da_cidade1, nome_da_cidade1, estado1, codigo_da_cidade2, nome_da_cidade2, estado2);
-    printf("DENSIDADE POPULACIONAL: PRIMERIA CARTA (%.2f hab/km²) x SEGUNDA CARTA (%.2f hab/km²)\n", densidade_populacional1, densidade_populacional2);
-    if (densidade_populacional1 > densidade_populacional2) {
+    printf("DENSIDADE POPULACIONAL: PRIMERIA CARTA (%f hab/km²) x SEGUNDA CARTA (%f hab/km²)\n", densidade_populacional1, densidade_populacional2);
+    if (densidade_populacional1 < densidade_populacional2) {
         printf("%s - %s - %s VENCEU NO QUESITO DENSIDADE POPULACIONAL!\n", codigo_da_cidade1, nome_da_cidade1, estado1);
     } else if (densidade_populacional1 < densidade_populacional2) {
         printf("%s - %s - %s VENCEU NO QUESITO DENSIDADE POPULACIONAL!\n", codigo_da_cidade2, nome_da_cidade2, estado2);
